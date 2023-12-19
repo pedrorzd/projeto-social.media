@@ -5,24 +5,75 @@ body { background-color: #91009C;
     background-attachment: fixed;
     background-size: cover;
     margin: auto;
+    overflow: hidden;
+}
+
+main{
+    height: 100vh;
+    position: relative;
 }
 
 #iphone{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 627px;
+    width: 311px;
+    background: url(imagens/frame-iphone.png);
+    
+}
+
+#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width:267px;
+    height:472px;
 }
 
 nav {
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    -ms-flex-align: ;
+}
+
+nav > ul > li{
+    list-style: none;
+    display: flex;
 }
 
 .buttons{
     border: 0px;
     border-radius:300px;
     padding: 10px;
+    transition: transform .2s; 
+    margin: 5px;
+    margin-right: 10px;
+}
+
+#home{
+    background: linear-gradient(135deg, hsla(291, 33%, 68%, 1) 1%, hsla(294, 17%, 89%, 1) 67%);
+}
+
+#instagram{
+    background: linear-gradient(135deg, hsla(285, 56%, 48%, 1) 0%, hsla(40, 100%, 61%, 1) 100%);
+}
+
+#github{
+    background: linear-gradient(135deg, hsla(212, 10%, 25%, 1) 0%, hsla(0, 0%, 77%, 1) 100%);
+}
+
+#twitter{
+    background: linear-gradient(135deg, hsla(212, 77%, 50%, 1) 0%, hsla(218, 63%, 74%, 1) 100%);
+}
+
+#youtube{
+    background: linear-gradient(135deg, hsla(0, 86%, 22%, 1) 1%, hsla(0, 78%, 47%, 1) 80%);
+}
+
+.buttons:hover{
+    transform: scale(1.3);
 }
